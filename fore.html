@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fore</title>
+</head>
+<body>
+<script type="text/javascript">
+    /*赋值变量，检测类型*/
+    var person = new Object();
+    person.name = "xiaoming";
+    var anotherperson = person;
+    alert(anotherperson.name);
+    alert(typeof anotherperson);
+    alert(anotherperson instanceof Number);
+    alert(anotherperson instanceof Object);
+    /*作用域*/
+    var color = "blue";
+
+    function test() {
+        if (color === "blue") {
+            color = "red";
+            with (location) {
+                var black = "black";
+                alert(black);
+            }
+        } else {
+            color = "blue";
+        }
+    }
+
+    test();
+    alert(color);
+</script>
+</body>
+</html>

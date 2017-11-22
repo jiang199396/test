@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function-arguments</title>
+</head>
+<body>
+<script type="text/javascript">
+    function test() {
+        if(arguments.length==1){
+            alert(arguments[0]);
+        }else if(arguments.length==2){
+            alert(arguments[0]+arguments[1]);
+        }else {
+            alert("算不过来了")
+        }
+    }
+    test(1);
+</script>
+</body>
+</html>
